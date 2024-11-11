@@ -1,0 +1,7 @@
+alembic init migrations
+
+Создаем миграцию через Alembic
+alembic revision --autogenerate -m "Initial migration"
+
+Применим миграции для Alembic
+alembic upgrade head
