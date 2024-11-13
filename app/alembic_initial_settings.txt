@@ -5,3 +5,13 @@ alembic revision --autogenerate -m "Initial migration"
 
 Применим миграции для Alembic
 alembic upgrade head
+
+Генерация кода для .env
+>>> from secrets import token_bytes
+>>> from base64 import b64encode
+>>> print(b64encode(token_bytes(32)).decode())
+>>> print(b64encode(token_bytes(32)).decode())
+
+Добавляем в .env две переменные
+SECRET_KEY=                 # Здесь сгенерированный пароль
+ALGORITHM=HS256
