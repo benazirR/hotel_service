@@ -34,3 +34,13 @@ RoomCannotBeBookedException = HTTPException(
     status_code=status.HTTP_409_CONFLICT,
     detail="Не осталось свободных номеров"
 )
+
+DateFromCannotBeAfterDateTo = HTTPException(
+    status_code=status.HTTP_400_BAD_REQUEST,
+    detail="Дата заезда не может быть позже даты выезда"
+)
+
+CannotBookHotelForLongPeriod = HTTPException(
+    status_code=status.HTTP_400_BAD_REQUEST,
+    detail="Невозможно забронировать отель сроком более месяца"
+)
