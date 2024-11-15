@@ -7,7 +7,7 @@ from app.exceptions import DateFromCannotBeAfterDateTo, CannotBookHotelForLongPe
 from app.hotels.dao import HotelDAO
 from app.hotels.schemas import SHotelInfo
 
-router = APIRouter(prefix="/hotels", tags=["hotels"])
+router = APIRouter(prefix="/hotels", tags=["Hotels"])
 
 @router.get("/{location}")
 async def get_hotels_by_location_and_time(
