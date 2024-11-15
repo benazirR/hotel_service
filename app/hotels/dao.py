@@ -39,7 +39,7 @@ class HotelDAO(BaseDAO):
 
         get_hotels_with_rooms = (
             select(
-                Hotels.__tablename__.columns,
+                Hotels.__table__.columns,
                 booked_hotels.c.rooms_left,
             ).join(booked_hotels, booked_hotels.c.hotel_id == Hotels.id, isouter=True).where(
                 and_(
