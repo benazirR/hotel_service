@@ -19,7 +19,7 @@ class BookingDAO(BaseDAO):
             date_from: date,
             date_to: date,
     ):
-        async with async_session_maker() as session:
+        async with (async_session_maker() as session):
             booked_rooms = select(Bookings).filter(
                 and_(
                 Bookings.room_id == room_id,
